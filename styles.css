@@ -1,0 +1,298 @@
+:root {
+  --font-heading: 'Inter', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  --color-bg:        #ffffff;
+  --color-text:      #333333;
+  --color-accent:    #6d87fa;
+  --color-highlight: #9C89FF;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --transition: 0.3s ease;
+
+  /* New: hue for preview cards (0–360) */
+  --card-hue: 210;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* Fullscreen orb canvas */
+#interactive-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+/* Ensure content stacks above orb */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid Utilities */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin-bottom: var(--space-sm);
+}
+h1 { font-size: 2.618rem; }
+h2 { font-size: 1.618rem; }
+h3 { font-size: 1rem; }
+p, li { margin-bottom: var(--space-sm); }
+
+/* Links & Buttons */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--color-highlight);
+}
+.btn-primary {
+  background: var(--color-highlight);
+  color: #fff;
+  padding: .75em 1.5em;
+  border-radius: .5em;
+  font-weight: 600;
+  transition: opacity var(--transition);
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Header as banner with just rounded corners */
+header.logo {
+  background: url("assets/banner.png") center/cover no-repeat;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  color: #fff;
+  padding: var(--space-lg) var(--space-sm);
+  text-align: center;
+}
+
+/* Ensure heading and nav sit above the background */
+header.logo h1,
+header.logo nav {
+  position: relative;
+  z-index: 1;
+}
+
+/* Nav links */
+header.logo nav a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+header.logo nav a:hover {
+  color: var(--color-highlight);
+}
+
+/* Heartbeat Divider */
+.heartbeat-divider {
+  width: 100%;
+  height: 40px;
+  background: url('assets/heartbeat.svg') center center no-repeat;
+  background-size: contain;
+  margin: var(--space-lg) 0;
+}
+
+/* About Section */
+.about-grid {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: var(--space-lg) var(--space-sm);
+}
+.about-image img {
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Showcase Section */
+.showcase-grid {
+  padding: var(--space-lg) var(--space-sm);
+}
+.showcase-grid h2 {
+  margin-bottom: var(--space-sm);
+}
+.showcase-grid .grid img,
+.showcase-grid .grid video {
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.showcase-grid .grid img:hover,
+.showcase-grid .grid video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Blog preview cards on index – color-driven by --card-hue */
+.blog-card {
+  background: hsl(var(--card-hue), 50%, 95%);
+  padding: var(--space-lg);
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(113, 163, 255, 0.584);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background var(--transition);
+}
+.blog-card h3 {
+  margin-bottom: var(--space-sm);
+}
+.blog-card p {
+  flex-grow: 1;
+  margin-bottom: var(--space-md);
+}
+.blog-card .btn-primary {
+  align-self: start;
+}
+
+/* Research preview cards – match .blog-card */
+.research-card {
+  background: hsl(var(--card-hue), 50%, 95%);
+  padding: var(--space-lg);
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(113, 163, 255, 0.584);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background var(--transition);
+}
+.research-card h3 {
+  margin-bottom: var(--space-sm);
+}
+.research-card p {
+  flex-grow: 1;
+  margin-bottom: var(--space-md);
+}
+.research-card .btn-primary {
+  align-self: start;
+}
+
+/* Placeholder tile styling to match real thumbnails */
+.project-item.placeholder .placeholder-content {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.project-item.placeholder:hover .placeholder-content {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.project-item.placeholder .placeholder-content {
+  color: var(--color-text);
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* Blog & Updates Section */
+.updates-grid {
+  padding: var(--space-lg) var(--space-sm);
+}
+
+/* Button list (if still used) */
+.button-list {
+  display: flex;
+  flex-direction: column;
+}
+.button-list a {
+  background: #fff;
+  border: 1px solid var(--color-accent);
+  border-radius: .5em;
+  padding: .5em 1em;
+  margin-bottom: var(--space-xs);
+  transition: background var(--transition), color var(--transition);
+}
+.button-list a:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Research Section (full page) */
+.research-grid {
+  padding: var(--space-lg) var(--space-sm);
+}
+.research-grid ol {
+  list-style-position: inside;
+}
+
+/* Contact Section (full page) */
+.contact-grid {
+  padding: var(--space-lg) var(--space-sm);
+}
+.contact-grid ul {
+  list-style: none;
+}
+.contact-grid li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Footer */
+footer {
+  background: #EDEDED;
+  text-align: center;
+  padding: var(--space-md);
+  font-size: .9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cols-2,
+  .cols-3 {
+    grid-template-columns: 1fr;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: var(--space-md) var(--space-sm);
+  }
+}
+
+/* Text-selection highlight */
+::selection {
+  background-color: #bbdf2b;
+  color:            #0073ff;
+}
+/* Firefox */
+::-moz-selection {
+  background-color: #FF3366;
+  color:            #FFFFFF;
+}

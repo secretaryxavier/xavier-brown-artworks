@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Xavier Brown Artworks</title>
+  <meta name="description" content="Gallery of paintings, digital works, and installations by Xavier Brown."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Fullscreen 3D orb canvas -->
+  <canvas id="interactive-canvas"></canvas>
+
+  <main>
+    <!-- HERO: site-wide landing nav -->
+    <section id="hero" class="hero-grid">
+      <div class="hero-text">
+        <h2>XAVIER BROWN</h2>
+        <p>Art, Cognition, Memory. Archives of the Future.</p>
+        <div class="hero-buttons">
+          <a href="index.html"      class="btn-primary">Home</a>
+          <a href="portfolio.html"  class="btn-primary">Portfolio</a>
+          <a href="academicprojects.html"   class="btn-primary">Academic Projects</a>
+          <a href="blog.html"       class="btn-primary">Blog</a>
+          <a href="contact.html"    class="btn-primary">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- PAGE-SPECIFIC CONTENT STARTS HERE -->
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfoliopaintings" class="grid cols-3 showcase-grid">
+      <div>
+        <h2>Portfolio Paintings</h2>
+        <div class="grid cols-3">
+          <img src="assets/portfolio/threshold-memory.jpg" alt="Threshold Memory">
+          <img src="assets/portfolio/tonal-echoes.jpg" alt="Tonal Echoes">
+          <img src="assets/portfolio/neural-forest.jpg" alt="Neural Forest">
+          <!-- add more painting/image thumbnails as needed -->
+        </div>
+      </div>
+
+      <!-- VIDEO SECTION -->
+      <div>
+        <h2>Video</h2>
+        <div class="grid cols-3">
+          <video
+            src="assets/portfolio/videos/aphextwininference.mp4"
+            controls
+            poster="assets/portfolio/videos/aphextwinstill.png">
+          </video>
+          <!-- add more video elements if you have them -->
+        </div>
+      </div>
+
+      <!-- DIGITAL PROJECTS SECTION -->
+      <div id="digital-projects">
+        <h2>Digital Projects</h2>
+        <div class="grid cols-3">
+          <a href="digital-projects.html#proj1">
+            <img src="assets\portfolio\videos\digital\IMG_0179.PNG" alt="Digital Project 1">
+          </a>
+          <a href="digital-projects.html#proj2">
+            <img src="assets\portfolio\videos\digital\IMG_0180.PNG" alt="Digital Project 2">
+          </a>
+          <a href="digital-projects.html#proj3">
+            <img src="assets\portfolio\videos\digital\Untitled_Artwork.PNG" alt="Digital Project 3">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>  
+
+  <footer role="contentinfo">
+    &copy; 2025 Xavier Brown. All rights reserved.
+  </footer>
+
+  <!-- Three.js & main script (your orb) -->
+  <script src="https://unpkg.com/three@0.150.1/build/three.min.js" defer></script>
+  <script src="scripts.js" defer></script>
+</body>
+</html>

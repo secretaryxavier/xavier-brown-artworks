@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About & Contact — Xavier Brown Artworks</title>
+  <meta name="description" content="About Xavier Brown and how to get in touch."/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Smooth scroll -->
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body>
+  <!-- 3D orb background -->
+  <canvas id="interactive-canvas"></canvas>
+
+  <main>
+    <!-- HERO NAV -->
+    <section id="hero" class="hero-grid">
+      <div class="hero-text">
+        <h2>XAVIER BROWN</h2>
+        <p>Art, Cognition, Memory. Archives of the Future.</p>
+        <div class="hero-buttons">
+          <a href="index.html"      class="btn-primary">Home</a>
+          <a href="portfolio.html"  class="btn-primary">Portfolio</a>
+          <a href="research.html"   class="btn-primary">Research Projects</a>
+          <a href="blog.html"       class="btn-primary">Blog</a>
+          <a href="#contact"        class="btn-primary">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- ABOUT MAIN -->
+    <section id="about-main" class="grid cols-2 about-grid" style="padding: var(--space-lg) var(--space-sm);">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>I think of my work as a dance—an ever-longing play of life, where self dissolves and perception peels back to childhood wonder. My pieces aren’t passive objects but living invitations: you, the observer and participant, become part of the conceptual loop, embodied within the art.</p>
+        <p>While labels feel constricting, I gravitate toward contemporary neo-expressionism, drawing inspiration from quantum mechanics, philosophy, consciousness studies, extraterrestrial imaginaries, meditation, psychotropic exploration, and love.</p>
+      </div>
+      <div class="about-image">
+        <img src="assets/portrait.jpg" alt="Portrait of Xavier Brown">
+      </div>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- ACADEMIC BIO -->
+    <section id="academic-bio" class="updates-section" style="padding: var(--space-lg) var(--space-sm);">
+      <h2>Academic Bio</h2>
+      <ul>
+        <li><strong>Portland Community College</strong> (2018–2020) — Early College High School program</li>
+        <li><strong>Pacific Northwest College of Art (PNCA)</strong> (2022–2023) — Painting student</li>
+        <li><strong>Portland State University</strong> (2023–present) — Honors Psychology, Junior</li>
+        <li><strong>Interdisciplinary Neuroscience Association</strong> — Science Officer</li>
+        <li><strong>Psi Chi International Honors Society</strong> — Candidate for Vice President, PSU Chapter</li>
+      </ul>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- ARTISTIC STATEMENT -->
+    <section id="artistic-statement" class="updates-section" style="padding: var(--space-lg) var(--space-sm);">
+      <h2>Artistic Statement</h2>
+      <p>My practice sits at the intersection of internal cognition and external representation—art as both process and artifact. I frame each piece as a feedback loop, where memory, ritual, and neural resonance converge to create an immersive experience.</p>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-grid grid cols-2" style="padding: var(--space-lg) var(--space-sm);">
+      <div>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:xavier@example.com">xavier@example.com</a></p>
+        <p>Twitter: <a href="https://twitter.com/xavierbrown" target="_blank" rel="noopener noreferrer">@xavierbrown</a></p>
+      </div>
+      <div>
+        <h2>Media Kit</h2>
+        <p><a href="docs/Press_Kit.zip" download>Download Press Kit (ZIP)</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    &copy; 2025 Xavier Brown. All rights reserved.
+  </footer>
+
+  <!-- Orb scripts -->
+  <script src="https://unpkg.com/three@0.150.1/build/three.min.js" defer></script>
+  <script src="scripts.js" defer></script>
+</body>
+</html>

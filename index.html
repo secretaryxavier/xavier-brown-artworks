@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xavier Brown Artworks</title>
+  <meta name="description" content="Interactive digital portfolio of Xavier Brown — art, neuroscience, cognition, and emerging tech." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Enable smooth scrolling -->
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body>
+
+  <!-- 1) Fullscreen 3D orb canvas -->
+  <canvas id="interactive-canvas"></canvas>
+
+  <main>
+    <!-- HERO (no header/nav above) -->
+    <section id="hero" class="hero-grid">
+      <div class="hero-text">
+        <h2>XAVIER BROWN</h2>
+        <p>Art, Cognition, Memory. Archives of the Future.</p>
+        <div class="hero-buttons">
+          <a href="portfolio.html" class="btn-primary">Portfolio</a>
+          <a href="#research-preview" class="btn-primary">Projects</a>
+          <a href="about.html#contact" class="btn-primary">Contact</a>
+          <a href="#digital-projects" class="btn-primary">Digital Works</a>
+          <a href="#blog"       class="btn-primary">Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="grid cols-3 about-grid">
+      <div class="about-image">
+        <img src="assets/portrait.jpg" alt="Portrait of Xavier Brown">
+      </div>
+      <div class="about-text">
+        <p>I’m Xavier Brown—a painter, digital media artist, and honors psychology student at Portland State University. My work explores the liminal space between internal cognition and external representation—between memory and ritual, between neural resonance and aesthetic artifact.</p>
+      </div>
+      <div class="about-links">
+        <ul>
+          <li><a href="about.html#academic-bio">Academic Bio</a></li>
+          <li><a href="about.html#art-statement">Artistic Statement</a></li>
+          <li><a href="docs/XavierBrown_CV.pdf" download>Download CV</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="grid cols-3 showcase-grid">
+      <div>
+        <h2>Portfolio</h2>
+        <div class="grid cols-3">
+          <img src="assets/portfolio/threshold-memory.jpg" alt="Threshold Memory">
+          <!-- more thumbnails… -->
+        </div>
+      </div>
+
+      <div> 
+        <h2>Video</h2>
+        <div class="grid cols-3">
+          <!-- Existing video -->
+          <video
+            src="assets/portfolio/videos/aphextwininference.mp4"
+
+            poster="assets/portfolio/videos/aphextwinstill.png">
+          </video>
+      
+          <!-- New second video -->
+          <video
+            src="assets\portfolio\videos\xavierperformancepnca.mp4"
+
+            poster="assets\portfolio\videos\xavierperformancepncastill.png">
+          </video>
+      
+          <!-- (Optional) a third slot or placeholder -->
+          <div class="video-placeholder">
+            <p>Coming Soon</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="digital-projects">
+        <h2>Digital Projects</h2>
+        <div class="grid cols-3">
+          <a href="digital-projects.html#proj1">
+            <img src="assets/portfolio/videos/digital/IMG_0179.PNG" alt="Digital Project 1">
+          </a>
+          <a href="digital-projects.html#proj2">
+            <img src="assets/portfolio/videos/digital/IMG_0180.PNG" alt="Digital Project 2">
+          </a>
+          <a href="digital-projects.html#proj3">
+            <img src="assets/portfolio/videos/digital/Untitled_Artwork.PNG" alt="Digital Project 3">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="heartbeat-divider"></div>
+
+<!-- BLOG PREVIEW -->
+<section id="blog" class="updates-grid" style="padding: var(--space-lg) var(--space-sm);">
+  <h2>Blog & Reflections</h2>
+  <div class="grid cols-3">
+    <!-- Article Summaries Preview -->
+    <article class="blog-card">
+      <h3>Article Summaries</h3>
+      <p>A concise breakdown of key findings on how neural patterns map onto symbolic cognition.</p>
+      <a href="blog.html#summaries" class="btn-primary">Read Summaries →</a>
+    </article>
+
+    <!-- Research Notes Preview -->
+    <article class="blog-card">
+      <h3>Research Notes</h3>
+      <p>Deep dives into active inference methods and tPBM meditation protocols.</p>
+      <a href="blog.html#process" class="btn-primary">View Notes →</a>
+    </article>
+
+    <!-- Creative Thoughts Preview -->
+    <article class="blog-card">
+      <h3>Creative Thoughts</h3>
+      <p>Reflections on ritual, memory, and how neural resonance informs my art.</p>
+      <a href="blog.html#creative" class="btn-primary">Explore Thoughts →</a>
+    </article>
+  </div>
+</section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- RESEARCH PREVIEW -->
+<section id="research-preview" class="research-preview-grid" style="padding: var(--space-lg) var(--space-sm);">
+  <h2>Projects & Research</h2>
+  <div class="grid cols-3">
+    <article class="research-card">
+      <h3>Gilman Scholar Project</h3>
+      <p>An overview of my Follow-On Service Project goals, partners, and timeline in Italy.</p>
+      <a href="academicprojects.html#gilman" class="btn-primary">Learn More →</a>
+    </article>
+
+    <article class="research-card">
+      <h3>Thesis Concepts</h3>
+      <p>Exploring active inference, neural symbolism, and photobiomodulation for fall 2025.</p>
+      <a href="academicprojects.html#thesis-concepts" class="btn-primary">Learn More →</a>
+    </article>
+
+    <article class="research-card">
+      <h3>Upcoming Collaborations</h3>
+      <p>Interviews in Bologna, INA initiatives, and digital media–cognition integration.</p>
+      <a href="academicprojects.html#collaborations" class="btn-primary">Learn More →</a>
+    </article>
+  </div>
+</section>
+
+    <div class="heartbeat-divider"></div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="grid cols-2 contact-grid">
+      <h2>Contact</h2>
+      <div>
+        <p>Email: <a href="mailto:xavier@example.com">xavier@example.com</a></p>
+      </div>
+      <div>
+        <ul>
+          <li>Twitter: <a href="https://twitter.com/xavierbrown">@xavierbrown</a></li>
+          <li>Media Kit: <a href="docs/Press_Kit.zip">Download</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    &copy; 2025 Xavier Brown. All rights reserved.
+  </footer>
+
+  <!-- Three.js & main script (your orb) -->
+  <script src="https://unpkg.com/three@0.150.1/build/three.min.js" defer></script>
+  <script src="scripts.js" defer></script>
+</body>
+</html>

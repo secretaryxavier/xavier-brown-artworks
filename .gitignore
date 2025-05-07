@@ -1,0 +1,6 @@
+node_modules# Ignore all MP4 videos in that folder
+assets/portfolio/videos/*.mp4
+
+# Node modules folder (if you had one)
+node_modules/
+
